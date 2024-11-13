@@ -1,10 +1,5 @@
 package CLI;
 
-import com.example.ticketing.config.Configuration;
-import com.example.ticketing.models.TicketPool;
-import com.example.ticketing.services.Vendor;
-import com.example.ticketing.services.Customer;
-
 public class Main {
     public static void main(String[] args) {
         try {

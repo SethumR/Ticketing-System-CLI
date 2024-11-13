@@ -1,7 +1,5 @@
 package CLI;
 
-import com.example.ticketing.models.TicketPool;
-
 public class Customer implements Runnable {
     private final TicketPool ticketPool;
     private final int retrievalInterval;

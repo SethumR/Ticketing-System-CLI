@@ -1,6 +1,5 @@
 package CLI;
 
-import com.example.ticketing.models.TicketPool;
 
 public class Vendor implements Runnable {
     private final TicketPool ticketPool;

@@ -18,6 +18,7 @@ public class TicketPool {
         }
     }
 
+
     public synchronized String purchaseTicket() throws InterruptedException {
         if (tickets.isEmpty()) {
             throw new InterruptedException("No tickets available. Please wait.");

@@ -1,6 +1,5 @@
 package CLI;
 
-
 public class Vendor implements Runnable {
     private final TicketPool ticketPool;
     private final int ticketsPerRelease;

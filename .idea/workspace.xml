@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef640c5-16a3-4515-8914-c4fc4132c2f2" name="Changes" comment="Updated all Files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CLI/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CLI/Vendor.java" afterDir="false" />
-    </list>
+    <list default="true" id="3ef640c5-16a3-4515-8914-c4fc4132c2f2" name="Changes" comment="Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731529306288</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1731694993673</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731694993673</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1731695037072</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731695037072</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,7 +137,8 @@
     <MESSAGE value="Created Customer.java" />
     <MESSAGE value="Created TicketPool.java" />
     <MESSAGE value="Updated all Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated all Files" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

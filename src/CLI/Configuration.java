@@ -32,6 +32,7 @@ public class Configuration {
         }
     }
 
+
     private void validateInputs() throws IllegalArgumentException {
         if (totalTickets <= 0 || ticketReleaseRate <= 0 || customerRetrievalRate <= 0 || maxTicketCapacity <= 0) {
             throw new IllegalArgumentException("All values must be positive numbers.");

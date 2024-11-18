@@ -39,6 +39,7 @@ public class Configuration {
         }
     }
 
+
     public int getTotalTickets() { return totalTickets; }
     public int getTicketReleaseRate() { return ticketReleaseRate; }
     public int getCustomerRetrievalRate() { return customerRetrievalRate; }

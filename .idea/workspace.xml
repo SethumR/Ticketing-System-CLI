@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef640c5-16a3-4515-8914-c4fc4132c2f2" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="3ef640c5-16a3-4515-8914-c4fc4132c2f2" name="Changes" comment="Updated TicketPool file">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_11_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/Configuration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/TicketPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLI/Vendor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ticketing-System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ticketing-System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CLI/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CLI/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,11 @@
     &quot;accountId&quot;: &quot;3da2e6c8-e64a-4488-8c48-3ea6fa5612af&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/CLI/Main.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Customer.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Vendor.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -51,18 +53,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="CLI" />
@@ -157,7 +163,95 @@
       <option name="project" value="LOCAL" />
       <updated>1731965151648</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created Configuration fiel">
+      <option name="closed" value="true" />
+      <created>1732636648081</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636648081</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created Main file">
+      <option name="closed" value="true" />
+      <created>1732636672033</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636672033</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Created Vendor file">
+      <option name="closed" value="true" />
+      <created>1732636710441</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636710441</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Created Customer file">
+      <option name="closed" value="true" />
+      <created>1732636756250</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636756250</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Created TicketPool file">
+      <option name="closed" value="true" />
+      <created>1732636794098</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636794098</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1732636817687</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636817687</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated Main file">
+      <option name="closed" value="true" />
+      <created>1732639509707</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639509708</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated Configuration file">
+      <option name="closed" value="true" />
+      <created>1732639538164</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639538164</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated Vendor file">
+      <option name="closed" value="true" />
+      <created>1732639562027</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639562027</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated Coutomer file">
+      <option name="closed" value="true" />
+      <created>1732639587189</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639587190</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updated TicketPool file">
+      <option name="closed" value="true" />
+      <created>1732639678717</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639678717</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +272,17 @@
     <MESSAGE value="Created Customer.java" />
     <MESSAGE value="Created TicketPool.java" />
     <MESSAGE value="Updated all Files" />
+    <MESSAGE value="Created Configuration fiel" />
+    <MESSAGE value="Created Main file" />
+    <MESSAGE value="Created Vendor file" />
+    <MESSAGE value="Created Customer file" />
+    <MESSAGE value="Created TicketPool file" />
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Updated Main file" />
+    <MESSAGE value="Updated Configuration file" />
+    <MESSAGE value="Updated Vendor file" />
+    <MESSAGE value="Updated Coutomer file" />
+    <MESSAGE value="Updated TicketPool file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated TicketPool file" />
   </component>
 </project>

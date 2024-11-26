@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
         // Ask the user for configuration inputs
         System.out.print("Enter total number of tickets: ");
         int totalTickets = scanner.nextInt();

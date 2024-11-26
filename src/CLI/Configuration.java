@@ -11,6 +11,7 @@ public class Configuration {
     private int customerRetrievalRate;
     private int maxTicketCapacity;
 
+
     // Getters and Setters
     public int getTotalTickets() { return totalTickets; }
     public void setTotalTickets(int totalTickets) { this.totalTickets = totalTickets; }

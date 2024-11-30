@@ -10,8 +10,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Configuration config = null;
 
-        System.out.print("Load configuration from file? (yes/no): ");
-        String loadConfig = scanner.next();
+        String loadConfig;
+        while (true) {
+            try {
+                System.out.print("Load configuration from file? (yes/no): ");
+                loadConfig = scanner.next().trim().toLowerCase(); // Normalize input
+                if (loadConfig.equals("yes") || loadConfig.equals("no")) {
+                    break; // Valid input, exit the loop
+                } else {
+                    System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error reading input. Please enter 'yes' or 'no'.");
+                scanner.next(); // Clear invalid input
+            }
+        }
 
         if (loadConfig.equalsIgnoreCase("yes")) {
             config = Configuration.loadFromFile("config.json");

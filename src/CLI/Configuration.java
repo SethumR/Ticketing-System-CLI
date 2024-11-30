@@ -34,6 +34,20 @@ public class Configuration {
         }
     }
 
+    // Save configuration to a text file
+    public void saveToTextFile(String fileName) {
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write("Configuration Details:\n");
+            writer.write("Total Tickets: " + totalTickets + "\n");
+            writer.write("Ticket Release Rate (ms): " + ticketReleaseRate + "\n");
+            writer.write("Customer Retrieval Rate (ms): " + customerRetrievalRate + "\n");
+            writer.write("Maximum Ticket Capacity: " + maxTicketCapacity + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     // Load configuration from a JSON file
     public static Configuration loadFromFile(String fileName) {
         Gson gson = new Gson();

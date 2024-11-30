@@ -8,73 +8,73 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Configuration config = null;
 
+        System.out.print("Load configuration from file? (yes/no): ");
+        String loadConfig = scanner.next();
 
-        // Ask the user for configuration inputs
-        System.out.print("Enter total number of tickets: ");
-        int totalTickets = scanner.nextInt();
+        if (loadConfig.equalsIgnoreCase("yes")) {
+            config = Configuration.loadFromFile("config.json");
+            if (config == null) {
+                System.out.println("Failed to load configuration. Exiting.");
+                return;
+            }
+        } else {
+            config = new Configuration();
 
-        System.out.print("Enter ticket release rate (in milliseconds): ");
-        int ticketReleaseRate = scanner.nextInt();
+            // Gather configuration inputs from the user
+            System.out.print("Enter total number of tickets: ");
+            config.setTotalTickets(scanner.nextInt());
 
-        System.out.print("Enter customer retrieval rate (in milliseconds): ");
-        int customerRetrievalRate = scanner.nextInt();
+            System.out.print("Enter ticket release rate (in milliseconds): ");
+            config.setTicketReleaseRate(scanner.nextInt());
 
-        System.out.print("Enter maximum ticket capacity: ");
-        int maxTicketCapacity = scanner.nextInt();
+            System.out.print("Enter customer retrieval rate (in milliseconds): ");
+            config.setCustomerRetrievalRate(scanner.nextInt());
 
-        // Initialize the ticket pool with user-defined maximum capacity
-        TicketPool ticketPool = new TicketPool(maxTicketCapacity);
+            System.out.print("Enter maximum ticket capacity: ");
+            config.setMaxTicketCapacity(scanner.nextInt());
+
+            // Save the entered configuration
+            config.saveToFile("config.json");
+            config.saveToTextFile("config.txt");
+            System.out.println("Configuration saved to config.json and Txt file");
+        }
+
+        // Initialize the ticket pool
+        int totalTickets = config.getTotalTickets();
+        int maxCapacity = config.getMaxTicketCapacity();
+        TicketPool ticketPool = new TicketPool(totalTickets, maxCapacity);
 
         // Create thread pools for vendors and customers
         ExecutorService vendorExecutor = Executors.newFixedThreadPool(2); // Two vendors
         ExecutorService customerExecutor = Executors.newFixedThreadPool(2); // Two customers
 
+        // Divide tickets equally between vendors
+        int ticketsPerVendor = totalTickets / 2;
+
         // Start vendor threads
-        for (int i = 1; i <= 2; i++) { // Simulate 2 vendors
-            vendorExecutor.submit(new Vendor(i, ticketPool, ticketReleaseRate));
+        for (int i = 1; i <= 2; i++) {
+            vendorExecutor.submit(new Vendor(i, ticketPool, ticketsPerVendor, config.getTicketReleaseRate()));
         }
 
         // Start customer threads
-        for (int i = 1; i <= 2; i++) { // Simulate 2 customers
-            customerExecutor.submit(new Customer(i, ticketPool, customerRetrievalRate));
+        for (int i = 1; i <= 2; i++) {
+            customerExecutor.submit(new Customer(i, ticketPool, config.getCustomerRetrievalRate()));
         }
 
-        // Monitor tickets and display status
-        int totalSold = 0;
-        while (true) {
-            int availableTickets = ticketPool.getAvailableTickets();
-            totalSold = totalTickets - availableTickets;
+        // Wait for threads to complete
+        vendorExecutor.shutdown();
+        customerExecutor.shutdown();
 
-            System.out.println("Current Tickets Available: " + availableTickets);
-            System.out.println("Total Tickets Sold: " + totalSold);
-
-            if (totalSold >= totalTickets) { // Check if all tickets have been sold
-                System.out.println("All tickets sold. Terminating system...");
-                ticketPool.terminate();
-                break;
-            }
-
-            try {
-                Thread.sleep(1000); // Print status every second
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-        // Shut down vendor and customer threads
-        vendorExecutor.shutdownNow();
-        customerExecutor.shutdownNow();
-
-        // Wait for threads to finish execution
         try {
-            vendorExecutor.awaitTermination(5, TimeUnit.SECONDS);
-            customerExecutor.awaitTermination(5, TimeUnit.SECONDS);
+            vendorExecutor.awaitTermination(5, TimeUnit.MINUTES);
+            customerExecutor.awaitTermination(5, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Final Tickets Available: " + ticketPool.getAvailableTickets());
+        System.out.println("System terminated. All tickets have been .");
         scanner.close();
     }
 }

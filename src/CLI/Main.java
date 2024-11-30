@@ -23,17 +23,11 @@ public class Main {
             config = new Configuration();
 
             // Gather configuration inputs from the user
-            System.out.print("Enter total number of tickets: ");
-            config.setTotalTickets(scanner.nextInt());
-
-            System.out.print("Enter ticket release rate (in milliseconds): ");
-            config.setTicketReleaseRate(scanner.nextInt());
-
-            System.out.print("Enter customer retrieval rate (in milliseconds): ");
-            config.setCustomerRetrievalRate(scanner.nextInt());
-
-            System.out.print("Enter maximum ticket capacity: ");
-            config.setMaxTicketCapacity(scanner.nextInt());
+            // Gather configuration inputs from the user
+            config.setTotalTickets(getValidPositiveNumber(scanner, "Enter total number of tickets: "));
+            config.setTicketReleaseRate(getValidPositiveNumber(scanner, "Enter ticket release rate (in milliseconds): "));
+            config.setCustomerRetrievalRate(getValidPositiveNumber(scanner, "Enter customer retrieval rate (in milliseconds): "));
+            config.setMaxTicketCapacity(getValidPositiveNumber(scanner, "Enter maximum ticket capacity: "));
 
             // Save the entered configuration
             config.saveToFile("config.json");
@@ -76,5 +70,23 @@ public class Main {
 
         System.out.println("System terminated. All tickets have been .");
         scanner.close();
+    }
+
+    // Method to validate enterd values
+    private static int getValidPositiveNumber(Scanner scanner, String question) {
+        while (true) {
+            System.out.print(question); // Display the question
+            try {
+                int value = scanner.nextInt(); // Read user input as an integer
+                if (value > 0) {
+                    return value; // Return the value if it's positive
+                } else {
+                    System.out.println("Invalid input. Please enter a positive number."); // Show error message
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a valid number."); // Show error message
+                scanner.next(); // Clear the invalid input
+            }
+        }
     }
 }

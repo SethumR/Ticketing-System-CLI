@@ -14,17 +14,16 @@ public class Customer implements Runnable {
     @Override
     public void run() {
         try {
-            while (!ticketPool.isTerminated()) {
-                Integer ticket = ticketPool.retrieveTicket();
-                if (ticket != null) {
-                    System.out.println("Customer " + customerId + " purchased Ticket ID: " + ticket);
-                } else {
-                    System.out.println("Customer " + customerId + ": No available tickets.");
+            while (!ticketPool.isFull()) {
+                Integer ticket = ticketPool.retrieveTicket(customerId);
+                if (ticket == null) {
+                    break; // No more tickets available
                 }
-                Thread.sleep(retrievalRate); // Pause based on retrieval rate
+                Thread.sleep(retrievalRate); // Simulate retrieval rate
             }
         } catch (InterruptedException e) {
-            System.out.println("Customer " + customerId + " terminated.");
+            System.out.println("Customer " + customerId + " interrupted.");
         }
+        System.out.println("Customer " + customerId + " finished buying tickets.");
     }
 }

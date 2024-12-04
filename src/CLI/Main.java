@@ -36,7 +36,6 @@ public class Main {
             config = new Configuration();
 
             // Gather configuration inputs from the user
-            // Gather configuration inputs from the user
             config.setTotalTickets(getValidPositiveNumber(scanner, "Enter total number of tickets: "));
             config.setTicketReleaseRate(getValidPositiveNumber(scanner, "Enter ticket release rate (in milliseconds): "));
             config.setCustomerRetrievalRate(getValidPositiveNumber(scanner, "Enter customer retrieval rate (in milliseconds): "));
@@ -53,22 +52,27 @@ public class Main {
         int maxCapacity = config.getMaxTicketCapacity();
         TicketPool ticketPool = new TicketPool(totalTickets, maxCapacity);
 
-        // Create thread pools for vendors and customers
-        ExecutorService vendorExecutor = Executors.newFixedThreadPool(2); // Two vendors
-        ExecutorService customerExecutor = Executors.newFixedThreadPool(2); // Two customers
+        // Ask the user for the number of vendors and customers
+        int numVendors = getValidPositiveNumber(scanner, "Enter the number of vendors: ");
+        int numCustomers = getValidPositiveNumber(scanner, "Enter the number of customers: ");
 
-        // Divide tickets equally between vendors
-        int ticketsPerVendor = totalTickets / 2;
+        // Create thread pools dynamically
+        ExecutorService vendorExecutor = Executors.newFixedThreadPool(numVendors);
+        ExecutorService customerExecutor = Executors.newFixedThreadPool(numCustomers);
+
+        // Divide tickets equally among vendors
+        int ticketsPerVendor = totalTickets / numVendors;
 
         // Start vendor threads
-        for (int i = 1; i <= 2; i++) {
+        for (int i = 1; i <= numVendors; i++) {
             vendorExecutor.submit(new Vendor(i, ticketPool, ticketsPerVendor, config.getTicketReleaseRate()));
         }
 
         // Start customer threads
-        for (int i = 1; i <= 2; i++) {
+        for (int i = 1; i <= numCustomers; i++) {
             customerExecutor.submit(new Customer(i, ticketPool, config.getCustomerRetrievalRate()));
         }
+
 
         // Wait for threads to complete
         vendorExecutor.shutdown();
@@ -81,7 +85,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("System terminated. All tickets have been .");
+        System.out.println("System terminated. All tickets have been Sold.");
         scanner.close();
     }
 

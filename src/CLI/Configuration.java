@@ -47,7 +47,6 @@ public class Configuration {
         }
     }
 
-
     // Load configuration from a JSON file
     public static Configuration loadFromFile(String fileName) {
         Gson gson = new Gson();

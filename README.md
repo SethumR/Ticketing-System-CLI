@@ -47,6 +47,8 @@ javac -d bin src/*.java
 java -cp bin Main  
 ```
 
+---
+
 ### 🚀 Usage Instrictions 
 #### Configuring the System 
 - Upon running the application, you’ll be prompted to enter:
@@ -81,12 +83,15 @@ INFO: Customer 1 bought Ticket ID: 1
 - Text File (simulation.txt): Stores user inputs and simulation logs.
 - JSON File (simulation.json): Stores the same data in JSON format for structured analysis.
 
+---
 
 ### 🛠️ Key Features
 - Concurrency: Utilizes Java threads to simulate real-time operations.
 - Thread Safety: Synchronization ensures data integrity.
 - Customizable: Flexible user inputs for dynamic simulations.
 - Data Persistence: Saves results in multiple file formats for further usage.
+
+---
 
 ### ☎️ Contact
 - Name : Sethum Ruberu

@@ -1,6 +1,6 @@
 # Real-Time Ticket Simulation System
 
-A robust real-time ticket simulation system built using Java, leveraging multithreading, synchronization, serialization, and file handling. The system provides a dynamic environment to simulate ticket vending and retrieval, based on user-defined parameters, with support for saving configurations and results in `.txt` and `.json` formats.
+A real-time ticket simulation system built using Java, leveraging multithreading, synchronization, serialization, and file handling. The system provides a dynamic environment to simulate ticket vending and retrieval, based on user-defined parameters, with support for saving configurations and results in `.txt` and `.json` formats.
 
 ---
 

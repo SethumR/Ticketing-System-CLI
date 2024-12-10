@@ -24,7 +24,7 @@ Ensure the following are installed on your system:
 - **Java**: JDK version 11 or higher.
 - **Node.js**: *(Optional)* Only required if processing `.json` files using Node.js tools.
 
----
+--
 
 ### Steps to Build and Run the Application
 
@@ -46,6 +46,7 @@ javac -d bin src/*.java
 ```bash
 java -cp bin Main  
 ```
+
 
 ---
 

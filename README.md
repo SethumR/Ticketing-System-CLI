@@ -49,7 +49,7 @@ java -cp bin Main
 
 ---
 
-### 🚀 Usage Instrictions 
+## 🚀 Usage Instrictions 
 #### Configuring the System 
 - Upon running the application, you’ll be prompted to enter:
 - Total Number of Tickets: The total number of tickets available for the simulation.
@@ -60,11 +60,11 @@ java -cp bin Main
 - Number of Customers: The number of customers retrieving tickets.
 
 #### Starting the Simulation 
-- Once all inputs are provided, the simulation begins automatically:
+Once all inputs are provided, the simulation begins automatically:
 - Vendors add tickets to the system.
 - Customers retrieve tickets concurrently.
  
-- Logs are displayed in the console for each operation, e.g.:
+Logs are displayed in the console for each operation, e.g.:
 ```bash
 Dec 10, 2024 2:29:42 PM CLI.Configuration saveToFile
 INFO: Configuration saved to config.json
@@ -85,7 +85,7 @@ INFO: Customer 1 bought Ticket ID: 1
 
 ---
 
-### 🛠️ Key Features
+## 🛠️ Key Features
 - Concurrency: Utilizes Java threads to simulate real-time operations.
 - Thread Safety: Synchronization ensures data integrity.
 - Customizable: Flexible user inputs for dynamic simulations.
@@ -93,7 +93,7 @@ INFO: Customer 1 bought Ticket ID: 1
 
 ---
 
-### ☎️ Contact
+## ☎️ Contact
 - Name : Sethum Ruberu
 - Email : Sethumgelaka6@gmail.com
 
